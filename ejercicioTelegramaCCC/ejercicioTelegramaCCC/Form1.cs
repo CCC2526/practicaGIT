@@ -21,15 +21,19 @@ namespace ejercicioTelegramaCCC
         {
             string textoTelegrama;
             char tipoTelegrama = 'o';
-            int numPalabras = 0;
+            int numPalabras;
             double coste;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             string[] palabras = textoTelegrama.Split(' ');
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (rdbUrgente.Checked)
             {
                 tipoTelegrama = 'u';
+            }
+            if (rdbOrdinario.Checked)
+            {
+                tipoTelegrama = 'o';
             }
             //Obtengo el número de palabras que forma el telegrama
             numPalabras = palabras.Length;
